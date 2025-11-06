@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICSEC - International Computer Science Education Consortium</title>
+    <!-- Tailwind CSS CDN --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font --><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        section {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        /* Custom Colors based on the logo */
+        .color-orange-dark { color: #e09121; } /* Based on the darker orange in logo */
+        .bg-orange-dark { background-color: #e09121; }
+        .border-orange-dark { border-color: #e09121; }
+        .hover\:text-orange-dark:hover { color: #e09121; }
+        .hover\:bg-orange-light:hover { background-color: #f7d299; } /* Lighter orange for hover */
+
+        .color-teal-dark { color: #1a7f80; } /* Based on the darker teal in logo */
+        .bg-teal-dark { background-color: #1a7f80; }
+        .border-teal-dark { border-color: #1a7f80; }
+        .hover\:text-teal-dark:hover { color: #1a7f80; }
+        .hover\:bg-teal-light:hover { background-color: #6ed6d7; } /* Lighter teal for hover */
+
+        /* Override specific Tailwind classes where needed to match logo colors */
+        .text-blue-800 { color: #1a7f80; } /* Replaced with teal */
+        .bg-blue-800 { background-color: #1a7f80; } /* Replaced with teal */
+        .border-blue-600 { border-color: #e09121; } /* Replaced with orange */
+        .bg-blue-600 { background-color: #e09121; } /* Replaced with orange */
+        .bg-blue-200 { background-color: #f7d299; } /* Replaced with lighter orange */
+        .text-blue-700 { color: #e09121; } /* Replaced with orange */
+        .text-blue-100 { color: #e09121; } /* Replaced with orange */
+
+        /* Background image styles for sections */
+        .section-bg-image {
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-bg-image::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            z-index: 1;
+        }
+
+        .section-bg-image > * {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- ナビゲーションヘッダー --><header class="bg-white/90 backdrop-blur-md shadow-md fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <!-- 1. ロゴをimgs/logo.pngに差し替え --><img src="./imgs/logo.png" alt="ICSEC Logo" class="h-10 mr-3">
+                <span class="text-2xl font-bold color-teal-dark">ICSEC</span>
+            </div>
+            <div class="space-x-6 hidden md:flex">
+                <a href="#home" class="text-gray-600 hover:text-orange-dark transition duration-300">Home</a>
+                <a href="#vision" class="text-gray-600 hover:text-orange-dark transition duration-300">Vision</a>
+                <a href="#message" class="text-gray-600 hover:text-orange-dark transition duration-300">Message</a>
+                <a href="#journey" class="text-gray-600 hover:text-orange-dark transition duration-300">Our Journey</a>
+                <a href="#join" class="text-gray-600 hover:text-orange-dark transition duration-300">Join Us</a>
+            </div>
+            <!-- モバイルメニューボタン（機能は省略） --><div class="md:hidden">
+                <button class="text-gray-800 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 1. ホーム (スライド1) --><section id="home" class="flex items-center justify-center bg-teal-dark text-white" style="min-height: 70vh;">
+        <div class="text-center p-8">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">ICSEC</h1>
+            <p class="text-2xl md:text-3xl font-light">International Computer Science Education Consortium</p>
+        </div>
+    </section>
+
+    <!-- 2. ビジョン (スライド3) --><!-- 背景画像追加 --><section id="vision" class="flex items-center justify-center text-white section-bg-image" style="background-image: url('./imgs/indonesia.webp');">
+        <div class="container mx-auto px-6 py-20 text-center">
+            <h2 class="text-4xl font-bold mb-8 relative z-20">The Vision</h2>
+            <div class="max-w-3xl mx-auto bg-black/50 p-10 rounded-xl shadow-lg relative z-20"> <!-- 背景色を調整 --><p class="text-3xl font-light leading-relaxed">
+                    "A world where every student is empowered through education to thrive in the digital era."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 理事長からのメッセージ (スライド4) --><section id="message" class="bg-gray-100">
+        <div class="container mx-auto px-6 py-20">
+            <h2 class="text-4xl font-bold text-center color-teal-dark mb-12">Message from Chairperson</h2>
+            <div class="max-w-5xl mx-auto bg-white p-10 rounded-xl shadow-lg">
+                <div class="md:flex md:space-x-10">
+                    <!-- 2. Chairpersonの写真をimgs/tonegawa.jpgに差し替え --><div class="md:w-1/3 flex-shrink-0 mb-8 md:mb-0">
+                        <img src="./imgs/tonegawa.jpg" alt="Chairperson Tonegawa" class="w-full max-w-xs mx-auto md:max-w-full md:mx-0 rounded-lg shadow-lg object-cover" style="max-height: 22rem;">
+                    </div>
+                    <!-- メッセージテキスト --><div class="md:w-2/3 space-y-6 text-gray-700 leading-relaxed">
+                        <p>AI is transforming our societies at an unprecedented pace. While every country’s education system is striving to keep up, the speed and approach differ widely.</p>
+                        <p>After leading Code for Everyone for ten years in Japan and engaging with international education leaders, I have learned that the most effective way to move forward is to learn from countries that have started earlier, and adapt their experiences to their own context.</p>
+                        <p>ICSEC will serve as a community of international education leaders who learn from each other, share their insights, and collectively envision “a world where every student is empowered through education to thrive in the digital era.”</p>
+                        <p class="font-semibold color-orange-dark">By sharing our successes and lessons learned. We can help the next generation of education leaders adapt build systems that support learned within their own cultural environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 私たちの歩み (スライド5-7) --><!-- 背景画像追加 --><section id="journey" class="text-white section-bg-image" style="background-image: url('./imgs/sendai-1.jpg');">
+        <div class="container mx-auto px-6 py-20">
+            <h2 class="text-4xl font-bold text-center mb-16 relative z-20">Our Journey</h2>
+            
+            <!-- タイムラインコンテナ --><div class="relative max-w-3xl mx-auto">
+                <!-- タイムラインの線 --><div class="absolute left-1/2 top-0 bottom-0 w-1 bg-orange-light transform -translate-x-1/2 z-10"></div>
+
+                <!-- タイムラインアイテム 1 --><div class="relative mb-12">
+                    <div class="md:flex items-center md:space-x-8">
+                        <div class="md:w-1/2 md:text-right md:pr-8">
+                            <div class="bg-black/50 p-6 rounded-lg shadow-lg border-l-4 border-orange-dark relative z-20">
+                                <h3 class="text-2xl font-bold color-teal-light mb-2">The Spark</h3> <!-- テキスト色調整 --><p class="text-gray-100">A meeting of minds with a shared passion. The first conversation: "What if we could build a regional community for CS education?"</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-8 mt-4 md:mt-0 relative z-20">
+                            <div class="bg-orange-dark text-white rounded-full w-24 h-24 flex items-center justify-center text-2xl font-bold shadow-xl mx-auto md:mx-0">2023</div>
+                            <p class="text-center md:text-left mt-4 text-xl font-semibold">Las Vegas (CSEdCon)</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- タイムラインアイテム 2 --><div class="relative mb-12">
+                    <div class="md:flex flex-row-reverse items-center md:space-x-reverse md:space-x-8">
+                        <div class="md:w-1/2 md:text-left md:pl-8">
+                            <div class="bg-black/50 p-6 rounded-lg shadow-lg border-r-4 md:border-r-0 md:border-l-4 border-orange-dark relative z-20">
+                                <h3 class="text-2xl font-bold color-teal-light mb-2">The First Step</h3> <!-- テキスト色調整 --><p class="text-gray-100">We proved that this is more than just an idea. We built a true community, connected across borders.</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pr-8 mt-4 md:mt-0 relative z-20">
+                            <div class="bg-orange-dark text-white rounded-full w-24 h-24 flex items-center justify-center text-2xl font-bold shadow-xl mx-auto md:ml-auto md:mr-0">2024</div>
+                            <p class="text-center md:text-right mt-4 text-xl font-semibold">Tokyo & Sendai</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- タイムラインアイテム 3 --><div class="relative">
+                    <div class="md:flex items-center md:space-x-8">
+                        <div class="md:w-1/2 md:text-right md:pr-8">
+                            <div class="bg-black/50 p-6 rounded-lg shadow-lg border-l-4 border-orange-dark relative z-20">
+                                <h3 class="text-2xl font-bold color-teal-light mb-2">Here We Are!</h3> <!-- テキスト色調整 --><p class="text-gray-100">Look at this room. Our community is growing. The passion is stronger than ever. It's time to build a sustainable future for this movement.</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-8 mt-4 md:mt-0 relative z-20">
+                            <div class="bg-orange-dark text-white rounded-full w-24 h-24 flex items-center justify-center text-2xl font-bold shadow-xl mx-auto md:mx-0">2025</div>
+                            <p class="text-center md:text-left mt-4 text-xl font-semibold">Bangkok!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 参加する (スライド8) --><section id="join" class="bg-teal-dark text-white">
+        <div class="container mx-auto px-6 py-20 text-center">
+            <h2 class="text-4xl font-bold mb-8">Join Us: Become a Founding Member</h2>
+            <div class="max-w-3xl mx-auto space-y-6 text-teal-100 text-lg leading-relaxed">
+                <p>We registered legal entity, however the entity is just a "vessel."</p>
+                <p>Our community gives it life. The vessel is new. It needs its crew.</p>
+            </div>
+            <div class="mt-12">
+                <!-- Googleフォームへのダミーボタン --><a href="#" 
+                   class="bg-orange-dark text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg hover:bg-orange-light hover:text-gray-800 hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                    Join with Google Form
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター --><footer class="bg-gray-800 text-gray-400 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 ICSEC - International Computer Science Education Consortium. All rights reserved.</p>
+            <!-- 簡易的なフッターリンク --><div class="mt-4 space-x-6">
+                <a href="#" class="hover:text-white">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
