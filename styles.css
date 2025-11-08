@@ -105,3 +105,10 @@ section {
     position: relative;
     z-index: 2;
 }
+
+@media (max-width: 768px) {
+    .section-bg-image {
+        background-attachment: scroll;
+        background-position: center top;
+    }
+}
