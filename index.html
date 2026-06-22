@@ -6,28 +6,37 @@
     <title>ICSEC - International Computer Science Education Consortium</title>
     <!-- Tailwind CSS CDN --><script src="https://cdn.tailwindcss.com"></script>
     <!-- Inter Font --><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
-    <link rel="stylesheet" href="styles.css?v=20260615">
+    <link rel="stylesheet" href="styles.css?v=20260622-2">
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- ナビゲーションヘッダー --><header class="bg-white/90 backdrop-blur-md shadow-md fixed top-0 left-0 right-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center">
-                <!-- 1. ロゴをimgs/logo.pngに差し替え --><img src="./imgs/logo.png" alt="ICSEC Logo" class="h-16 mr-4">
+    <header class="bg-white/90 backdrop-blur-md shadow-md fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center relative">
+            <a href="./index.html" class="flex items-center" aria-label="ICSEC homepage">
+                <img src="./imgs/logo.png" alt="ICSEC Logo" class="h-16 mr-4">
                 <span class="text-2xl font-bold color-teal-dark">ICSEC</span>
+            </a>
+            <div class="hidden lg:flex items-center gap-4 xl:gap-6 text-sm xl:text-base">
+                <a href="./index.html#home" aria-current="page" class="color-orange-dark font-semibold">Home</a>
+                <a href="./catalyst-fund-2026.html" class="text-gray-600 hover:text-orange-dark transition duration-300">Catalyst Fund</a>
+                <a href="./index.html#vision" class="text-gray-600 hover:text-orange-dark transition duration-300">Vision</a>
+                <a href="./index.html#message" class="text-gray-600 hover:text-orange-dark transition duration-300">Message</a>
+                <a href="./index.html#journey" class="text-gray-600 hover:text-orange-dark transition duration-300">Our Journey</a>
+                <a href="./index.html#join" class="text-gray-600 hover:text-orange-dark transition duration-300">Join Us</a>
             </div>
-            <div class="space-x-6 hidden md:flex">
-                <a href="#home" class="text-gray-600 hover:text-orange-dark transition duration-300">Home</a>
-                <a href="#vision" class="text-gray-600 hover:text-orange-dark transition duration-300">Vision</a>
-                <a href="#message" class="text-gray-600 hover:text-orange-dark transition duration-300">Message</a>
-                <a href="#journey" class="text-gray-600 hover:text-orange-dark transition duration-300">Our Journey</a>
-                <a href="#join" class="text-gray-600 hover:text-orange-dark transition duration-300">Join Us</a>
-            </div>
-            <!-- モバイルメニューボタン（機能は省略） --><div class="md:hidden">
-                <button class="text-gray-800 focus:outline-none">
+            <details class="global-menu lg:hidden">
+                <summary class="text-gray-800 cursor-pointer" aria-label="Open navigation menu">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
+                </summary>
+                <div class="global-menu-panel">
+                    <a href="./index.html#home" aria-current="page" class="color-orange-dark font-semibold">Home</a>
+                    <a href="./catalyst-fund-2026.html">Catalyst Fund</a>
+                    <a href="./index.html#vision">Vision</a>
+                    <a href="./index.html#message">Message</a>
+                    <a href="./index.html#journey">Our Journey</a>
+                    <a href="./index.html#join">Join Us</a>
+                </div>
+            </details>
         </nav>
     </header>
 
@@ -35,6 +44,37 @@
         <div class="text-center p-8">
             <h1 class="text-5xl md:text-7xl font-bold mb-4">ICSEC</h1>
             <p class="text-2xl md:text-3xl font-light">International Computer Science Education Consortium</p>
+        </div>
+    </section>
+
+    <!-- Catalyst Fund announcement -->
+    <section id="catalyst-fund" class="catalyst-announcement">
+        <div class="container mx-auto px-6 py-16 relative z-10">
+            <div class="max-w-6xl mx-auto md:flex md:items-center md:justify-between md:gap-12">
+                <div class="md:max-w-3xl">
+                    <p class="text-orange-200 font-semibold uppercase tracking-widest mb-3">Applications Now Open</p>
+                    <h2 class="text-3xl md:text-5xl font-bold leading-tight mb-5">
+                        <a href="./catalyst-fund-2026.html" class="hover:text-orange-200 transition duration-300">
+                            ICSEC Catalyst Fund – Pilot Round 2026
+                        </a>
+                    </h2>
+                    <div class="flex flex-wrap gap-x-8 gap-y-3 text-lg md:text-xl font-semibold">
+                        <p>USD 20,000 grant</p>
+                        <p>Apply by 22 July 2026</p>
+                    </div>
+                </div>
+                <div class="mt-8 md:mt-0 flex flex-col sm:flex-row md:flex-col gap-4 md:min-w-64">
+                    <a href="./catalyst-fund-2026.html"
+                       class="text-center bg-orange-dark text-white font-bold py-3 px-7 rounded-full shadow-lg hover:bg-orange-light hover:text-gray-800 hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        Learn More
+                    </a>
+                    <a href="https://docs.google.com/document/d/1ZIUwLGaSOuYghLsEohNzgVdAo0BVqm5AVPns7Twwmj4/edit?tab=t.0#heading=h.s404kaxx7ejh"
+                       target="_blank" rel="noopener noreferrer"
+                       class="text-center border-2 border-white text-white font-bold py-3 px-7 rounded-full hover:bg-white hover:text-teal-dark transition duration-300">
+                        View Call for Proposal
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
