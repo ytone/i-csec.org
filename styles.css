@@ -144,6 +144,109 @@ section {
 }
 
 /* Abstract network treatment for the Catalyst Fund announcement */
+.apcse-announcement {
+    position: relative;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: #ffffff;
+    background-color: #111827;
+    background-image:
+        radial-gradient(circle at 82% 28%, rgba(110, 214, 215, 0.34) 0 5px, transparent 6px),
+        radial-gradient(circle at 70% 72%, rgba(255, 255, 255, 0.18) 0 3px, transparent 4px),
+        radial-gradient(circle at 94% 76%, rgba(110, 214, 215, 0.2) 0 4px, transparent 5px),
+        linear-gradient(120deg, #111827 0%, #172d3b 55%, #1a7f80 130%);
+}
+
+.apcse-announcement::before,
+.apcse-announcement::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(110, 214, 215, 0.15);
+    border-radius: 9999px;
+}
+
+.apcse-announcement::before {
+    width: 26rem;
+    height: 26rem;
+    top: -15rem;
+    right: 6%;
+}
+
+.apcse-announcement::after {
+    width: 18rem;
+    height: 18rem;
+    right: -8rem;
+    bottom: -10rem;
+}
+
+.apcse-eyebrow {
+    color: #6ed6d7;
+}
+
+.news-card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.news-card:hover {
+    border-color: rgba(26, 127, 128, 0.35);
+    box-shadow: 0 14px 30px rgba(17, 24, 39, 0.08);
+    transform: translateY(-2px);
+}
+
+.news-tag {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    padding: 0.3rem 0.75rem;
+    color: #126b6c;
+    background-color: rgba(110, 214, 215, 0.22);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.newsletter-archive a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border-radius: 0.65rem;
+    min-height: 4rem;
+    padding: 0.9rem 1rem;
+    color: #374151;
+    background-color: #f9fafb;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.newsletter-archive a:hover {
+    color: #126b6c;
+    background-color: rgba(110, 214, 215, 0.14);
+}
+
+.newsletter-archive span {
+    line-height: 1.35;
+}
+
+.newsletter-archive strong {
+    margin-right: 0.35rem;
+    color: #1a7f80;
+}
+
+.newsletter-archive small {
+    flex-shrink: 0;
+    color: #6b7280;
+}
+
+@media (max-width: 639px) {
+    .newsletter-archive a {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.35rem;
+    }
+}
+
 .catalyst-announcement {
     position: relative;
     overflow: hidden;
