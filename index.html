@@ -6,15 +6,14 @@
     <title>ICSEC - International Computer Science Education Consortium</title>
     <!-- Tailwind CSS CDN --><script src="https://cdn.tailwindcss.com"></script>
     <!-- Inter Font --><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
-    <link rel="stylesheet" href="styles.css?v=20260622-2">
+    <link rel="stylesheet" href="styles.css?v=20260822">
 </head>
 <body class="bg-gray-50 text-gray-800">
 
     <header class="bg-white/90 backdrop-blur-md shadow-md fixed top-0 left-0 right-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center relative">
             <a href="./index.html" class="flex items-center" aria-label="ICSEC homepage">
-                <img src="./imgs/logo.png" alt="ICSEC Logo" class="h-16 mr-4">
-                <span class="text-2xl font-bold color-teal-dark">ICSEC</span>
+                <img src="./imgs/logo.png?v=20260822-2" alt="ICSEC Logo" class="h-24 w-auto">
             </a>
             <div class="hidden lg:flex items-center gap-4 xl:gap-6 text-sm xl:text-base">
                 <a href="./index.html#home" aria-current="page" class="color-orange-dark font-semibold">Home</a>
@@ -166,17 +165,17 @@
             <h2 class="text-4xl font-bold text-center mb-16 relative z-20">Our Journey</h2>
             
             <!-- タイムラインコンテナ --><div class="relative max-w-3xl mx-auto">
-                <!-- タイムラインの線 --><div class="absolute left-1/2 top-0 bottom-0 w-1 bg-orange-light transform -translate-x-1/2 z-10"></div>
+                <!-- タイムラインの線 --><div class="journey-line absolute left-1/2 top-0 bottom-0 w-1 transform -translate-x-1/2 z-10"></div>
 
                 <!-- タイムラインアイテム 1 --><div class="relative mb-12">
                     <div class="md:flex items-center md:space-x-8">
                         <div class="md:w-1/2 md:text-right md:pr-8">
-                            <div class="bg-black/50 p-6 rounded-lg shadow-lg border-l-4 border-orange-dark relative z-20">
-                                <h3 class="text-2xl font-bold color-teal-light mb-2">The Spark</h3> <!-- テキスト色調整 --><p class="text-gray-100">A meeting of minds with a shared passion. The first conversation: "What if we could build a regional community for CS education?"</p>
+                            <div class="journey-card p-6 rounded-lg shadow-lg relative z-20">
+                                <h3 class="journey-title text-2xl font-bold mb-2">The Spark</h3><p class="text-gray-100">A meeting of minds with a shared passion. The first conversation: "What if we could build a regional community for CS education?"</p>
                             </div>
                         </div>
                         <div class="md:w-1/2 md:pl-8 mt-4 md:mt-0 relative z-20">
-                            <div class="bg-orange-dark text-white rounded-full w-24 h-24 flex items-center justify-center text-2xl font-bold shadow-xl mx-auto md:mx-0">2023</div>
+                            <div class="journey-year rounded-full w-24 h-24 flex items-center justify-center text-2xl font-bold shadow-xl mx-auto md:mx-0">2023</div>
                             <p class="text-center md:text-left mt-4 text-xl font-semibold">Las Vegas (CSEdCon)</p>
                         </div>
                     </div>
@@ -185,27 +184,41 @@
                 <!-- タイムラインアイテム 2 --><div class="relative mb-12">
                     <div class="md:flex flex-row-reverse items-center md:space-x-reverse md:space-x-8">
                         <div class="md:w-1/2 md:text-left md:pl-8">
-                            <div class="bg-black/50 p-6 rounded-lg shadow-lg border-r-4 md:border-r-0 md:border-l-4 border-orange-dark relative z-20">
-                                <h3 class="text-2xl font-bold color-teal-light mb-2">The First Step</h3> <!-- テキスト色調整 --><p class="text-gray-100">We proved that this is more than just an idea. We built a true community, connected across borders.</p>
+                            <div class="journey-card p-6 rounded-lg shadow-lg relative z-20">
+                                <h3 class="journey-title text-2xl font-bold mb-2">The First Step</h3><p class="text-gray-100">We proved that this is more than just an idea. We built a true community, connected across borders.</p>
                             </div>
                         </div>
                         <div class="md:w-1/2 md:pr-8 mt-4 md:mt-0 relative z-20">
-                            <div class="bg-orange-dark text-white rounded-full w-24 h-24 flex items-center justify-center text-2xl font-bold shadow-xl mx-auto md:ml-auto md:mr-0">2024</div>
+                            <div class="journey-year rounded-full w-24 h-24 flex items-center justify-center text-2xl font-bold shadow-xl mx-auto md:ml-auto md:mr-0">2024</div>
                             <p class="text-center md:text-right mt-4 text-xl font-semibold">Tokyo & Sendai</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- タイムラインアイテム 3 --><div class="relative">
+                <!-- タイムラインアイテム 3 --><div class="relative mb-12">
                     <div class="md:flex items-center md:space-x-8">
                         <div class="md:w-1/2 md:text-right md:pr-8">
-                            <div class="bg-black/50 p-6 rounded-lg shadow-lg border-l-4 border-orange-dark relative z-20">
-                                <h3 class="text-2xl font-bold color-teal-light mb-2">Here We Are!</h3> <!-- テキスト色調整 --><p class="text-gray-100">Look at this room. Our community is growing. The passion is stronger than ever. It's time to build a sustainable future for this movement.</p>
+                            <div class="journey-card p-6 rounded-lg shadow-lg relative z-20">
+                                <h3 class="journey-title text-2xl font-bold mb-2">Here We Are!</h3><p class="text-gray-100">Look at this room. Our community is growing. The passion is stronger than ever. It's time to build a sustainable future for this movement.</p>
                             </div>
                         </div>
                         <div class="md:w-1/2 md:pl-8 mt-4 md:mt-0 relative z-20">
-                            <div class="bg-orange-dark text-white rounded-full w-24 h-24 flex items-center justify-center text-2xl font-bold shadow-xl mx-auto md:mx-0">2025</div>
-                            <p class="text-center md:text-left mt-4 text-xl font-semibold">Bangkok!</p>
+                            <div class="journey-year rounded-full w-24 h-24 flex items-center justify-center text-2xl font-bold shadow-xl mx-auto md:mx-0">2025</div>
+                            <p class="text-center md:text-left mt-4 text-xl font-semibold">Bangkok</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- タイムラインアイテム 4 --><div class="relative">
+                    <div class="md:flex flex-row-reverse items-center md:space-x-reverse md:space-x-8">
+                        <div class="md:w-1/2 md:text-left md:pl-8">
+                            <div class="journey-card p-6 rounded-lg shadow-lg relative z-20">
+                                <h3 class="journey-title text-2xl font-bold mb-2">The Next Chapter</h3><p class="text-gray-100">In October 2026, our community will gather in Seoul for the Asia Pacific Computer Science Education Conference, deepening collaboration across the region.</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pr-8 mt-4 md:mt-0 relative z-20">
+                            <div class="journey-year rounded-full w-24 h-24 flex items-center justify-center text-2xl font-bold shadow-xl mx-auto md:ml-auto md:mr-0">2026</div>
+                            <p class="text-center md:text-right mt-4 text-xl font-semibold">Seoul</p>
                         </div>
                     </div>
                 </div>

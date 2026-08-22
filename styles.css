@@ -1,3 +1,15 @@
+:root {
+    --brand-orange: #f7961d;
+    --brand-orange-dark: #a95000;
+    --brand-orange-light: #fbcb8c;
+    --brand-indigo: #2a338e;
+    --brand-indigo-dark: #171d5d;
+    --brand-teal: #53bfa9;
+    --brand-teal-light: #cdefe8;
+    --brand-pink: #df79af;
+    --brand-sky: #00adee;
+}
+
 body {
     font-family: 'Inter', sans-serif;
 }
@@ -35,12 +47,12 @@ html {
 }
 
 .global-menu-panel a:hover {
-    color: #e09121;
+    color: var(--brand-orange-dark);
     background-color: #f9fafb;
 }
 
 .global-menu-panel a[aria-current="page"] {
-    color: #e09121;
+    color: var(--brand-orange-dark);
 }
 
 section {
@@ -50,72 +62,112 @@ section {
 
 /* Custom Colors based on the logo */
 .color-orange-dark {
-    color: #e09121;
+    color: var(--brand-orange-dark);
 }
 
 .bg-orange-dark {
-    background-color: #e09121;
+    background-color: var(--brand-orange);
+}
+
+.bg-orange-dark.text-white {
+    color: var(--brand-indigo) !important;
 }
 
 .border-orange-dark {
-    border-color: #e09121;
+    border-color: var(--brand-orange);
 }
 
 .hover\:text-orange-dark:hover {
-    color: #e09121;
+    color: var(--brand-orange-dark);
 }
 
 .hover\:bg-orange-light:hover {
-    background-color: #f7d299;
+    background-color: var(--brand-orange-light);
 }
 
 .color-teal-dark {
-    color: #1a7f80;
+    color: var(--brand-indigo);
 }
 
 .bg-teal-dark {
-    background-color: #1a7f80;
+    background-color: var(--brand-indigo);
 }
 
 .border-teal-dark {
-    border-color: #1a7f80;
+    border-color: var(--brand-indigo);
 }
 
 .hover\:text-teal-dark:hover {
-    color: #1a7f80;
+    color: var(--brand-indigo);
 }
 
 .hover\:bg-teal-light:hover {
-    background-color: #6ed6d7;
+    background-color: var(--brand-teal);
+}
+
+.color-teal-light {
+    color: var(--brand-teal);
+}
+
+.bg-orange-light {
+    background-color: var(--brand-orange-light);
+}
+
+.text-orange-200 {
+    color: var(--brand-orange-light);
+}
+
+.text-teal-50 {
+    color: #edf9f7;
+}
+
+.text-teal-100 {
+    color: var(--brand-teal-light);
+}
+
+.hover\:text-teal-200:hover {
+    color: #91dccd;
+}
+
+.hover\:bg-teal-100:hover {
+    background-color: #ddf5f0;
+}
+
+.focus\:ring-orange-300:focus {
+    --tw-ring-color: rgba(247, 150, 29, 0.5);
+}
+
+.accent-orange-500 {
+    accent-color: var(--brand-orange);
 }
 
 /* Override specific Tailwind classes where needed to match logo colors */
 .text-blue-800 {
-    color: #1a7f80;
+    color: var(--brand-indigo);
 }
 
 .bg-blue-800 {
-    background-color: #1a7f80;
+    background-color: var(--brand-indigo);
 }
 
 .border-blue-600 {
-    border-color: #e09121;
+    border-color: var(--brand-orange);
 }
 
 .bg-blue-600 {
-    background-color: #e09121;
+    background-color: var(--brand-orange);
 }
 
 .bg-blue-200 {
-    background-color: #f7d299;
+    background-color: var(--brand-orange-light);
 }
 
 .text-blue-700 {
-    color: #e09121;
+    color: var(--brand-orange-dark);
 }
 
 .text-blue-100 {
-    color: #e09121;
+    color: var(--brand-orange-light);
 }
 
 /* Background image styles for sections */
@@ -143,6 +195,31 @@ section {
     z-index: 2;
 }
 
+#journey::before {
+    background-color: rgba(23, 29, 93, 0.68);
+}
+
+.journey-line {
+    background-color: var(--brand-orange);
+}
+
+.journey-card {
+    border-left: 4px solid;
+    border-color: var(--brand-orange);
+    background-color: rgba(23, 29, 93, 0.9);
+    box-shadow: 0 14px 34px rgba(10, 13, 48, 0.28);
+    backdrop-filter: blur(6px);
+}
+
+.journey-title {
+    color: var(--brand-teal);
+}
+
+.journey-year {
+    color: var(--brand-indigo);
+    background-color: var(--brand-orange);
+}
+
 /* Abstract network treatment for the Catalyst Fund announcement */
 .apcse-announcement {
     position: relative;
@@ -150,19 +227,19 @@ section {
     padding-top: 0;
     padding-bottom: 0;
     color: #ffffff;
-    background-color: #111827;
+    background-color: var(--brand-indigo-dark);
     background-image:
-        radial-gradient(circle at 82% 28%, rgba(110, 214, 215, 0.34) 0 5px, transparent 6px),
-        radial-gradient(circle at 70% 72%, rgba(255, 255, 255, 0.18) 0 3px, transparent 4px),
-        radial-gradient(circle at 94% 76%, rgba(110, 214, 215, 0.2) 0 4px, transparent 5px),
-        linear-gradient(120deg, #111827 0%, #172d3b 55%, #1a7f80 130%);
+        radial-gradient(circle at 82% 28%, rgba(83, 191, 169, 0.45) 0 5px, transparent 6px),
+        radial-gradient(circle at 70% 72%, rgba(223, 121, 175, 0.34) 0 3px, transparent 4px),
+        radial-gradient(circle at 94% 76%, rgba(247, 150, 29, 0.32) 0 4px, transparent 5px),
+        linear-gradient(120deg, #171d5d 0%, #2a338e 58%, #00adee 145%);
 }
 
 .apcse-announcement::before,
 .apcse-announcement::after {
     content: "";
     position: absolute;
-    border: 1px solid rgba(110, 214, 215, 0.15);
+    border: 1px solid rgba(83, 191, 169, 0.24);
     border-radius: 9999px;
 }
 
@@ -181,7 +258,15 @@ section {
 }
 
 .apcse-eyebrow {
-    color: #6ed6d7;
+    color: var(--brand-teal);
+}
+
+.apcse-announcement h2 a {
+    color: #ffffff;
+}
+
+.apcse-announcement h2 a:hover {
+    color: #91dccd;
 }
 
 .news-card {
@@ -189,7 +274,7 @@ section {
 }
 
 .news-card:hover {
-    border-color: rgba(26, 127, 128, 0.35);
+    border-color: rgba(42, 51, 142, 0.35);
     box-shadow: 0 14px 30px rgba(17, 24, 39, 0.08);
     transform: translateY(-2px);
 }
@@ -199,8 +284,8 @@ section {
     align-items: center;
     border-radius: 9999px;
     padding: 0.3rem 0.75rem;
-    color: #126b6c;
-    background-color: rgba(110, 214, 215, 0.22);
+    color: var(--brand-indigo);
+    background-color: rgba(83, 191, 169, 0.24);
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.08em;
@@ -221,8 +306,8 @@ section {
 }
 
 .newsletter-archive a:hover {
-    color: #126b6c;
-    background-color: rgba(110, 214, 215, 0.14);
+    color: var(--brand-indigo);
+    background-color: rgba(83, 191, 169, 0.16);
 }
 
 .newsletter-archive span {
@@ -231,7 +316,7 @@ section {
 
 .newsletter-archive strong {
     margin-right: 0.35rem;
-    color: #1a7f80;
+    color: var(--brand-indigo);
 }
 
 .newsletter-archive small {
@@ -253,13 +338,13 @@ section {
     padding-top: 0;
     padding-bottom: 0;
     color: #ffffff;
-    background-color: #126b6c;
+    background-color: var(--brand-indigo);
     background-image:
-        radial-gradient(circle at 12% 28%, rgba(247, 210, 153, 0.28) 0 4px, transparent 5px),
-        radial-gradient(circle at 31% 76%, rgba(255, 255, 255, 0.2) 0 3px, transparent 4px),
-        radial-gradient(circle at 72% 23%, rgba(247, 210, 153, 0.24) 0 5px, transparent 6px),
-        radial-gradient(circle at 91% 68%, rgba(255, 255, 255, 0.2) 0 4px, transparent 5px),
-        linear-gradient(120deg, #126b6c 0%, #1a7f80 55%, #126b6c 100%);
+        radial-gradient(circle at 12% 28%, rgba(247, 150, 29, 0.42) 0 4px, transparent 5px),
+        radial-gradient(circle at 31% 76%, rgba(83, 191, 169, 0.36) 0 3px, transparent 4px),
+        radial-gradient(circle at 72% 23%, rgba(223, 121, 175, 0.38) 0 5px, transparent 6px),
+        radial-gradient(circle at 91% 68%, rgba(0, 173, 238, 0.4) 0 4px, transparent 5px),
+        linear-gradient(120deg, #171d5d 0%, #2a338e 58%, #00adee 145%);
 }
 
 .catalyst-announcement::before,
@@ -312,8 +397,8 @@ section {
     height: 1rem;
     border: 3px solid #ffffff;
     border-radius: 9999px;
-    background-color: #e09121;
-    box-shadow: 0 0 0 2px #e09121;
+    background-color: var(--brand-orange);
+    box-shadow: 0 0 0 2px var(--brand-orange);
     transform: translateX(-50%);
 }
 
